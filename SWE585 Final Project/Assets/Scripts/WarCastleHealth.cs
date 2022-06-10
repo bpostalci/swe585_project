@@ -66,11 +66,11 @@ public class WarCastleHealth : MonoBehaviour
     {
         m_ExplosionParticles.transform.position = transform.position;
         m_Score.IncrementScore();
-        m_WarCastles.UpdateRemainingWarCastles();
         m_Alive = false;
         m_ExplosionParticles.gameObject.SetActive(true);
         m_ExplosionParticles.Play();
         m_ExplosionAudio.Play();
         gameObject.SetActive(false);
+        m_WarCastles.UpdateRemainingWarCastles();
     }
 }
